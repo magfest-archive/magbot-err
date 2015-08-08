@@ -4,8 +4,7 @@
 
 CWD=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 
-# -d 
-docker run -ti \
+docker run -d \
  --name magbot \
  -e BACKEND='Slack' \
  -e BOT_TOKEN=$BOT_TOKEN \
@@ -13,8 +12,3 @@ docker run -ti \
  --volume $CWD/config.py:/err/config.py \
  magfest/magbot \
  err
-
-
-# -e BOT_ADMINS=admin@xmpp.local \
-# -e BOT_USERNAME=err@xmmp.local \
-# -e BOT_PASSWORD=errbotpwd \
