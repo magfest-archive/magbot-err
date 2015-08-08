@@ -1,6 +1,5 @@
 # magfest-specific errbot setup
 
-FROM rroemhild/err
+FROM errbot/err:python3master
 
-COPY requirements.txt /app/requirements-extra.txt
-RUN /app/venv/bin/pip3 install --no-cache-dir -r /app/requirements-extra.txt
+RUN runas err /err/virtualenv/bin/pip install slackclient
