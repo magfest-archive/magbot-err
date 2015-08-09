@@ -6,7 +6,10 @@ cd $CWD
 
 . secret-settings
 
-docker run \
+exec docker run \
+ -a stdout -a stderr \
+ --rm=true \
+ --name=magbot \
  -e BACKEND='Slack' \
  -e BOT_ADMINS=$BOT_ADMINS \
  -e BOT_TOKEN=$BOT_TOKEN \
