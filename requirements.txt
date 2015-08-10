@@ -1,0 +1,7 @@
+# for slack
+slackclient
+
+# for err-imagebot
+feedparser
+lxml
+beautifulsoup4
