@@ -10,6 +10,7 @@ exec docker run \
  -a stdout -a stderr \
  --rm=true \
  --name=magbot \
+ --volumes-from magbot-data \
  -e BACKEND='Slack' \
  -e BOT_ADMINS=$BOT_ADMINS \
  -e BOT_TOKEN=$BOT_TOKEN \
