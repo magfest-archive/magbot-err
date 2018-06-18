@@ -1,6 +1,6 @@
 # magfest-specific errbot setup
 
-FROM errbot/err:python3master
+FROM errbot/err:latest
 
 RUN     apt-get -y update && \
         apt-get -y install \
